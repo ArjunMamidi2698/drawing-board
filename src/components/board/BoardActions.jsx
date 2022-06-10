@@ -1,7 +1,7 @@
 import { Box, Button, Switch, Typography } from "@mui/material";
 import { useBoard } from "../../stores/board-context";
 
-export const BoardActions = () => {
+export const BoardActions = ({ onDownload }) => {
 	const { setResetBoard, drag, setDrag } = useBoard();
 	const handleReset = () => {
 		setResetBoard(true);
@@ -22,13 +22,26 @@ export const BoardActions = () => {
 			}}
 		>
 			<Box display="flex">
-				<Typography color={!drag ? "primary.dark" : "primary"}>Click to paint</Typography>
+				<Typography color={!drag ? "primary.dark" : "primary"}>
+					Click to paint
+				</Typography>
 				<Switch
 					checked={drag}
 					onChange={(e) => setDrag(e.target.checked)}
 				/>
-				<Typography color={drag ? "primary.dark" : "primary"}>Hover to paint</Typography>
+				<Typography color={drag ? "primary.dark" : "primary"}>
+					Hover to paint
+				</Typography>
 			</Box>
+			<Button
+				variant="contained"
+				onClick={onDownload}
+				sx={{
+					color: "#FFFFFF",
+				}}
+			>
+				Download
+			</Button>
 			<Button
 				variant="contained"
 				onClick={handleReset}

@@ -17,16 +17,15 @@ export const PickerMenu = () => {
 	};
 	return (
 		<>
-			<IconButton>
+			<IconButton onClick={handleClick}>
 				<Colorize
 					id="basic-button"
 					aria-controls={open ? "basic-menu" : undefined}
 					aria-haspopup="true"
 					aria-expanded={open ? "true" : undefined}
-					onClick={handleClick}
 					sx={{
 						color: theme.palette.primary.dark,
-						borderBottom: `.5rem solid ${picked}`
+						borderBottom: `.5rem solid ${picked}`,
 					}}
 					fontSize="large"
 					titleAccess="Color Picker"

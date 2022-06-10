@@ -7,7 +7,7 @@ import theme from "../../themes";
 export const BoardCell = () => {
 	const { picked } = usePicked();
 	const { resetBoard, drag } = useBoard();
-	const [cellBackground, setCellBackground] = useState();
+	const [cellBackground, setCellBackground] = useState("#FFFFFF");
 	const updateColor = useCallback(() => {
 		setCellBackground(picked);
 	}, [picked]);
