@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import { PickedProvider } from "./stores/picked-context";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./themes";
+import { BoardProvider } from "./stores/board-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
-		<PickedProvider>
-			<App />
-		</PickedProvider>
+			<BoardProvider>
+				<PickedProvider>
+					<App />
+				</PickedProvider>
+			</BoardProvider>
 		</ThemeProvider>
 	</React.StrictMode>
 );

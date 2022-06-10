@@ -1,8 +1,8 @@
 import { Box, Button, Switch, Typography } from "@mui/material";
-import { usePicked } from "../../stores/picked-context";
+import { useBoard } from "../../stores/board-context";
 
 export const BoardActions = () => {
-	const { setResetBoard, drag, setDrag } = usePicked();
+	const { setResetBoard, drag, setDrag } = useBoard();
 	const handleReset = () => {
 		setResetBoard(true);
 		setTimeout(() => {

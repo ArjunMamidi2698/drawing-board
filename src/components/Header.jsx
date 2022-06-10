@@ -1,6 +1,7 @@
 import { PickerMenu } from "./PickerMenu";
 import logo from "../pixelentArtLogo.jpg";
 import "./Header.css";
+import { SettingsMenu } from "./SettingsMenu";
 
 export const Header = () => {
 	return (
@@ -8,6 +9,7 @@ export const Header = () => {
 			<img src={logo} width="250px" height="130px" />
 			<div className="spacer" />
 			<PickerMenu />
+			<SettingsMenu />
 		</header>
 	);
 };

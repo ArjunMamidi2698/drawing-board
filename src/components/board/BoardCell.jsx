@@ -1,10 +1,12 @@
 import { TableCell } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
+import { useBoard } from "../../stores/board-context";
 import { usePicked } from "../../stores/picked-context";
 import theme from "../../themes";
 
 export const BoardCell = () => {
-	const { picked, resetBoard, drag } = usePicked();
+	const { picked } = usePicked();
+	const { resetBoard, drag } = useBoard();
 	const [cellBackground, setCellBackground] = useState();
 	const updateColor = useCallback(() => {
 		setCellBackground(picked);

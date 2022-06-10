@@ -1,5 +1,5 @@
 import { Colorize } from "@mui/icons-material";
-import { Menu } from "@mui/material";
+import { IconButton, Menu } from "@mui/material";
 import { useState } from "react";
 import { HexColorPicker } from "react-colorful";
 import { usePicked } from "../stores/picked-context";
@@ -17,18 +17,21 @@ export const PickerMenu = () => {
 	};
 	return (
 		<>
-			<Colorize
-				id="basic-button"
-				aria-controls={open ? "basic-menu" : undefined}
-				aria-haspopup="true"
-				aria-expanded={open ? "true" : undefined}
-				onClick={handleClick}
-				sx={{
-					color: theme.palette.primary.dark,
-				}}
-				fontSize="large"
-				titleAccess="Color Picker"
-			/>
+			<IconButton>
+				<Colorize
+					id="basic-button"
+					aria-controls={open ? "basic-menu" : undefined}
+					aria-haspopup="true"
+					aria-expanded={open ? "true" : undefined}
+					onClick={handleClick}
+					sx={{
+						color: theme.palette.primary.dark,
+						borderBottom: `.5rem solid ${picked}`
+					}}
+					fontSize="large"
+					titleAccess="Color Picker"
+				/>
+			</IconButton>
 			<Menu
 				id="basic-menu"
 				anchorEl={anchorEl}
