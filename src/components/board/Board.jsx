@@ -1,4 +1,5 @@
 import { Container, Table, TableBody, TableRow } from "@mui/material";
+import { BoardActions } from "./BoardActions";
 import { BoardCell } from "./BoardCell";
 
 export const Board = () => {
@@ -19,6 +20,7 @@ export const Board = () => {
 						))}
 				</TableBody>
 			</Table>
+			<BoardActions />
 		</Container>
 	);
 };
