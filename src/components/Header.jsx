@@ -1,5 +1,5 @@
 import { PickerMenu } from "./PickerMenu";
-import logo from "../pixelArtLogo.jpg";
+import logo from "../pixelentArtLogo.jpg";
 import "./Header.css";
 
 export const Header = () => {

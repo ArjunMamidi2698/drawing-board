@@ -1,4 +1,4 @@
-# Pixel art
+# Pixelent art
 Design your creative Digital Arts here.
 
 # Getting Started with Create React App
